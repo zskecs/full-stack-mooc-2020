@@ -1,5 +1,11 @@
-browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/notes
-server-->browser: HTML-code
+note over browser:
+
+User submits form
+end note
+
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note
+server-->browser: Redirect 302 - /notes
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/notes
 browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
 server-->browser: main.css
 browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.js
